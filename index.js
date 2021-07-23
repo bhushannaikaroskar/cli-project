@@ -99,7 +99,8 @@ while (!exit) {
 
   
   console.log("Want to retake the quiz?" );
-  var c = readlineSync.keyInYN("Press y to continue or n to end ");
+  exit = readlineSync.keyInYN("Press y to continue or n to end ");
+  exit = !exit;
   console.log("\n\n");
 
   score= 0;
