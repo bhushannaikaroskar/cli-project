@@ -4,6 +4,43 @@ var score = 0;
 var exit = false;
 var username;
 
+var highscores = [
+  
+  {
+    name: "Sahil",
+    score: 4
+  },
+  {
+    name: "Meetkumar",
+    score: 4
+  },
+  {
+    name: "Sachin",
+    score: 3
+  }
+];
+
+var questions = [
+  {
+    question: "Where do I live? ",
+    answer: "Mumbai",
+    options: [
+      "Mumbai", "Pune", "Chennai","Banglore"
+    ]
+  }, {
+    question: "My favourite superhero would be ",
+    answer: "Iron-Man"
+  }, {
+    question: "What's my favourite food item? ",
+    answer: "Vada pav"
+  }, {
+    question: "Where do I study? ",
+    answer: "KJ Somaiya"
+  }, {
+    question: "Whats my favourite programming language",
+    answer: "Javascript"
+  }
+];
 
 function greeting(){
   username = readlineSync.question('What is your name? ');
@@ -14,7 +51,6 @@ function greeting(){
 function play(question, answer) {
 
   var userAnswer = readlineSync.question(question);
-
   if(userAnswer === 'e'){
     return true;
   }
@@ -45,7 +81,6 @@ function playGame(){
   }
   console.log("Your score for the quiz is " + score);
   console.log("quiz ended\n\n");
-
 }
 
 function displayHighScores(){
@@ -60,55 +95,12 @@ function displayHighScores(){
   }
 }
 
-
-var highscores = [
-  
-  {
-    name: "Sahil",
-    score: 4
-  },
-  {
-    name: "Meetkumar",
-    score: 4
-  },
-  {
-    name: "Sachin",
-    score: 3
-  }
-];
-
-
-var questions = [
-  {
-    question: "Where do I live? ",
-    answer: "Mumbai",
-    options: [
-      "Mumbai", "Pune", "Chennai","Banglore"
-    ]
-  }, {
-    question: "My favourite superhero would be ",
-    answer: "Iron-Man"
-  }, {
-    question: "What's my favourite food item? ",
-    answer: "Vada pav"
-  }, {
-    question: "Where do I study? ",
-    answer: "KJ Somaiya"
-  }, {
-    question: "Whats my favourite programming language",
-    answer: "Javascript"
-  }
-];
-
-
 while (!exit) {
 
   greeting();
   playGame();
   displayHighScores();
 
-
-  
   console.log("Want to retake the quiz?" );
   exit = readlineSync.keyInYN("Press y to continue or n to end ");
   exit = !exit;
