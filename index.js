@@ -1,7 +1,6 @@
 var readlineSync = require('readline-sync');
 
 var score = 0;
-var exit = false;
 var username;
 
 var highscores = [
@@ -95,17 +94,10 @@ function displayHighScores(){
   }
 }
 
-while (!exit) {
 
-  greeting();
-  playGame();
-  displayHighScores();
+greeting();
+playGame();
+displayHighScores();
 
-  console.log("Want to retake the quiz?" );
-  exit = readlineSync.keyInYN("Press y to continue or n to end ");
-  exit = !exit;
-  console.log("\n\n");
 
-  score= 0;
 
-}
