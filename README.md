@@ -1,8 +1,8 @@
 # cli-project
  
-Aa interactive Command Line App to check how much you know about your friend using *NodeJS*. 
+An interactive Command Line App to check how much you know about your friend using *NodeJS*. 
 
-<hr>
+<br>
 
 ## Tech Used
 
